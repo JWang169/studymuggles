@@ -14,21 +14,21 @@ const SearchBar = () => {
     };
     const submitInfo = async(event) =>{
         event.preventDefault();
-        try{
-            const urlString = `http://localhost:3003/tutors/searchTutor`;
-            const result = await axios.get(urlString, {
-                'startTime': startTime,
-                'endTime': endTime,
-                'subject': searchTerm,
-                'proficiency': proficiency,
-                'sort': sort
-            })
-            setMatched(result)
-            console.log(result);
-            return <TutorList matchedTutors = {matched} />   
-        }catch(e){
-            console.log(e);
-        }
+        // try{
+        //     const urlString = `http://localhost:3003/tutors/searchTutor`;
+        //     const result = await axios.get(urlString, {
+        //         'startTime': startTime,
+        //         'endTime': endTime,
+        //         'subject': searchTerm,
+        //         'proficiency': proficiency,
+        //         'sort': sort
+        //     })
+        //     setMatched(result)
+        //     console.log(result);
+        //     return <TutorList matchedTutors = {matched} />   
+        // }catch(e){
+        //     console.log(e);
+        // }
     }
 
     return (
@@ -43,79 +43,15 @@ const SearchBar = () => {
             required
             />
             </div>
-            <div className="field">
-            <label>Start time</label>
-            <input
-            type="datetime-local"
-            value={startTime}
-            onChange={(e) => {
-                setStartTime(e.target.value);
-              }
-            }
-            />
-            </div>
-            <div className="field">
-            <label>End time</label>
-            <input
-            type="datetime-local"
-            value={endTime}
-            onChange={(e) => {setEndTime(e.target.value);}}
-            />
-            </div>
+            
+            <div className="row">
 
-            <div className="field">
-            <label>Your Proficiency</label>
-            <div className="form-check">
-                    <label className="form-check-label">
-                    <input 
-                    type="radio" 
-                    className="form-check-input" 
-                    name="prof" 
-                    onChange={(e) => setProficiency("Beginner")}
-                    /> Beginner
-                    </label>
+
+            <div className="col">Gryffindor </div>  
+            <div className="col">Slytherin </div>  
+            <div className="col">Ravenclaw </div>  
+            <div className="col">Hufflepuff </div> 
             </div> 
-            <div className="form-check">
-                <label className="form-check-label">
-                <input type="radio" 
-                className="form-check-input" 
-                name="prof"
-                onChange={(e) => setProficiency("Intermediate")}
-                /> Intermediate
-                </label>
-            </div> 
-            <div className="form-check">
-                <label className="form-check-label">
-                <input type="radio" 
-                className="form-check-input" 
-                name="prof"
-                onChange={(e) => setProficiency("Advanced")}
-                /> Advanced
-                </label>
-            </div>   
-            </div>  
-                
-            <div className="form-check">
-                <label>Sort By</label>
-                <div className="form-check">
-                <label className="form-check-label">
-                <input type="radio" 
-                className="form-check-input" 
-                name="optradio"
-                onChange={(e) => setSort("price")}
-                /> Price
-                </label>
-                </div> 
-                <div className="form-check">
-                <label className="form-check-label">
-                <input type="radio" 
-                className="form-check-input" 
-                name="optradio"
-                onChange={(e) => setSort("rate")}
-                /> Rating
-                </label>
-                </div> 
-                </div>
             <br/>
             <button className="ui primary button" type='submit'>Search</button>
         </form>
