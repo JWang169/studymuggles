@@ -6,6 +6,7 @@ import 'semantic-ui-css/semantic.min.css';
 import '../App.css';
 
 import Homepage from './Homepage';
+import SortingHat from './sortingHat';
 import Navigation from './Navigation';
 import SignUp from './SignUp';
 import LogIn from './Login';
@@ -43,7 +44,7 @@ function App() {
         <Container>
           <Navigation />
           <Route exact path='/' component={Homepage} />
-          <Route exact path='/signup' component={SignUp} />
+          <Route exact path='/signup' component={SortingHat} />
           <Route exact path='/login' component={LogIn} />
           <Route exact path='/logout' component={LogOut} token={token} />
           <Route exact path='/demo' component={Demo} />

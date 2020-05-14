@@ -5,9 +5,34 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.gryffindor {
+  width: 50%;
+  height: 50%;
+  background: repeating-linear-gradient(45deg, #c6a513, #c6a513 3px, #6d0000 3px, #6d0000 9px, #c6a513 9px, #c6a513 10px, #6d0000 10px, #6d0000 30px);
+}
+
+.slytherin {
+  width: 50%;
+  height: 50%;
+  background: repeating-linear-gradient(45deg, #7a7a7a, #7a7a7a 3px, #0b3a07 3px, #0b3a07 9px, #7a7a7a 9px, #7a7a7a 10px, #0b3a07 10px, #0b3a07 30px);
+}
+
+.ravenclaw {
+  width: 50%;
+  height: 50%;
+  background: repeating-linear-gradient(45deg, #7a7a7a, #7a7a7a 3px, #191c68 3px, #191c68 9px, #7a7a7a 9px, #7a7a7a 10px, #191c68 10px, #191c68 30px);
+}
+
+.hufflepuff {
+  width: 50%;
+  height: 50%;
+  background: repeating-linear-gradient(45deg, #161616, #161616 3px, #c6a513 3px, #c6a513 9px, #161616 9px, #161616 10px, #c6a513 10px, #c6a513 30px);
 }
